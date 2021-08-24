@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-video {
+/* video {
   object-fit: cover;
   width: 100vw;
+  height: 100vh;
+} */
+
+.background {
+  background-color: #181818;
+  height: 100vh;
+}
+
+header {
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.content {
   height: 100vh;
 }

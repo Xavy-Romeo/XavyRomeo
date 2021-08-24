@@ -1,12 +1,25 @@
-import backgrounVid from './assets/videos/backgroundVid.mp4';
+import { ThemeProvider } from '@material-ui/core/styles';
+
+import theme from './theme';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import backgroundVid from './assets/videos/backgroundVid.mp4';
 
 function App() {
+
   return (
-    <div> 
-      <video autoPlay loop muted>
-        <source src={backgrounVid} type='video/mp4' />
-      </video>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <header>
+          <h1>
+            Hello World
+          </h1>
+        </header>
+        <div className='background'>
+        </div>
+      </CssBaseline>
+    </ThemeProvider>
   );
 };
 
