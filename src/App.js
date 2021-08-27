@@ -8,6 +8,7 @@ import {
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import Home from './pages/Home';
 import theme from './theme';
 import Header from './components/Header';
 
@@ -22,9 +23,7 @@ function App() {
           <Header />
 
           <Switch>
-            <Route path = '/Home'>
-
-            </Route>
+            <Route path = '/Home' component={Home} />
             <Route path='/About'>
 
             </Route>

@@ -13,18 +13,18 @@ export default function Header () {
     const classes = useStyles();
 
     return (
-        <AppBar className={classes.appbar}>
+        <AppBar className={classes.appbar} id='header'>
             <Toolbar className={classes.toolbar}>
-                    <Box className={classes.nameContainer}> 
-                        <Link to='/Home' className={classes.nameLink}>
-                            <Typography className={classes.xavyTitle} variant='h1'>
-                                Xavy Romeo
-                            </Typography>
-                        </Link>
-                    </Box>
-                    <Box>
-                        <NavBar />
-                    </Box>
+                <Box className={classes.nameContainer}> 
+                    <Link to='/Home' className={classes.nameLink}>
+                        <Typography className={classes.xavyTitle} variant='h1'>
+                            Xavy Romeo
+                        </Typography>
+                    </Link>
+                </Box>
+                <Box>
+                    <NavBar />
+                </Box>
             </Toolbar>
         </AppBar>
     );
