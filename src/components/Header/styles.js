@@ -8,9 +8,13 @@ const useStyles = makeStyles({
     },
     toolbar: {
         justifyContent: 'space-between',
+        margin: 'auto 0'
     },
     nameContainer: {
         marginBottom: '5px'
+    },
+    nameLink: {
+        textDecoration: 'none'
     },
     xavyTitle: {
         marginTop: 0,
@@ -24,7 +28,7 @@ const useStyles = makeStyles({
             textShadow: '3px 3px rgb(195, 2, 2)',
             transition: '.5s'
         }
-    }
+    },
 });
 
 export default useStyles;
