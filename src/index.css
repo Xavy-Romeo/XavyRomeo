@@ -6,12 +6,3 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-.background {
-  background-color: #181818;
-  height: 120vh;
-}
-
-.content {
-  height: 100vh;
-}

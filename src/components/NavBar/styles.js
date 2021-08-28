@@ -10,13 +10,13 @@ const useStyles = makeStyles({
     },
     menuIcon: {
         fontSize: '60px',
-        backgroundColor: 'rgba(0,0,0,.3)',
+        backgroundColor: 'rgba(0,0,0,0.4)',
         border: '1px solid black',
         cursor: 'pointer',
-        color: 'rgb(10, 163, 194)',
+        color: 'rgba(255,255,255,0.87)',
         '&:hover': {
             border: '1px solid white',
-            backgroundColor: 'rgb(0,0,0, .5)'
+            backgroundColor: 'rgb(100,100,100,0.3)'
         }
     },
     navLink: {
@@ -51,7 +51,6 @@ const useStyles = makeStyles({
             textDecoration: 'underline'
         }
     }
-
 });
 
 export default useStyles;

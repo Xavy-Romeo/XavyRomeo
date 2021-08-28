@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     appbar: {
         height: '75px',
-        background: 'linear-gradient(349deg, rgba(2,0,36,1) 0%, rgba(114,18,20,1) 16%, rgba(121,9,9,1) 47%, rgba(10,163,194,1) 100%)',
+        // background: 'linear-gradient(349deg, rgba(2,0,36,1) 0%, rgba(114,18,20,1) 16%, rgba(121,9,9,1) 47%, rgba(10,163,194,1) 100%)',
+        background: 'linear-gradient(to bottom, black, rgba(0,0,0,.4) 70%, rgba(0,0,0,0))',
+        boxShadow: 'none'
     },
     toolbar: {
         justifyContent: 'space-between',

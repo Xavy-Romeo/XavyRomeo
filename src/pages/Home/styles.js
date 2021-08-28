@@ -17,17 +17,19 @@ const useStyles = makeStyles({
         left: 0,
         width: '100%',
         height: '50vh',
-        zIndex:'8'
+        zIndex:'8',
+        objectFit: 'cover'
     },
-
     landingSun: {
         position: 'absolute',
         height: '20vh',
-        right: '15%',
+        right: '8%',
         top: '8%',
         zIndex: '5',
+        '@media (max-width:500px)': {
+            top: '15%',
+        } 
     },
-
     landingCloud: {
         position: 'absolute',
         height: '30vh',
@@ -39,15 +41,18 @@ const useStyles = makeStyles({
             opacity: '1'
         } 
     },
-
     landingCloud2: {
         position: 'absolute',
         height: '26vh',
-        right: '20%',
+        right: '15%',
         top: '15%',
-        zIndex: '6'
+        zIndex: '6',
+        '@media (max-width:500px)': {
+            height: '20vh',
+            right: '35%',
+            top: '18%',
+        } 
     },
-
     landingYatch: {
         position: 'absolute',
         height: '15vh',
@@ -55,15 +60,16 @@ const useStyles = makeStyles({
         right: '15%',
         zIndex: '10'
     },
-
     landingShip: {
         position: 'absolute',
         height: '5vh',
         bottom: '38.3%',
         left: '30%',
-        zIndex: '9'
+        zIndex: '9',
+        '@media (max-width:1750px)': {
+            left: '90%'
+        },
     },
-
     landingPalm: {
         position: 'absolute',
         height: '80vh',
@@ -73,8 +79,13 @@ const useStyles = makeStyles({
         '@media (min-width:2300px)': {
             left: '-5%'
         },
+        '@media (max-width:1100px)': {
+            left: '-50%'
+        },
+        '@media (max-width:500px)': {
+            left: '-70%'
+        },
     },
-
     landingTitle: {
         marginTop: '60px',
         position: 'absolute',
@@ -94,7 +105,39 @@ const useStyles = makeStyles({
             fontSize: '8rem'
         }
     },
-    
+    landingAboutContainer: {
+        margin: '60px auto 0 auto',
+        borderTop: '2px solid white',
+    },
+    landingAbout: {
+        margin: '50px 0'
+    },
+    landingPaper: {
+        padding: '20px 30px',
+        alignItems: 'center'
+    },
+    stackTitle: {
+        marginRight: '10px',
+        '@media (max-width:400px)': {
+            fontSize: '1.5rem',
+        },
+    },
+    landingButtonContainer: {
+        marginTop: '15px'
+    },
+    landingButton: {
+        width: '40%',
+        background: 'linear-gradient(rgba(55,188,241,1), white, rgba(55,188,241,1))',
+        '&:hover': {
+            background: 'linear-gradient(transparent, rgba(55,188,241,1), transparent)',
+        },
+        '@media (max-width:700px)': {
+            width: '90%',
+        },
+        '@media (min-width:1500px)': {
+            width: '30%',
+        }
+    }
 });
 
 export default useStyles;

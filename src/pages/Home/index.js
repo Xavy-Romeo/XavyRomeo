@@ -5,6 +5,9 @@ import React, { useEffect } from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 import useStyles from './styles';
 import Sea from '../../assets/images/sea.png';
@@ -13,6 +16,7 @@ import Yatch from '../../assets/images/yatch.png';
 import Ship from '../../assets/images/pirate-ship.png';
 import Cloud from '../../assets/images/cloud.png';
 import Palm from '../../assets/images/palm-tree.png';
+import Coding from '../../assets/images/coding.svg';
 
 export default function Home() {
     const classes = useStyles();
@@ -53,7 +57,39 @@ export default function Home() {
             </Box>
 
             <Container maxWidth='xl'>
-                {/* <About classes={classes} /> */}
+                    <Box className={classes.landingAboutContainer}>
+                        <Grid container className={classes.landingAbout} justifyContent='center' alignItems='center'>
+                            <Grid item lg={6} md={8} sm={10} xs={12}>
+                                <img src={Coding} alt='Coding on a laptop with a hot coffee on the side.' style={{width: '100%'}}/>
+                            </Grid>
+                            <Grid item lg={6} md={8} sm={10} xs={12}>
+                                <Paper className={classes.landingPaper}>
+                                    <Box>
+                                        <Typography variant='h2'>
+                                            Xavy Romeo 
+                                        </Typography>
+                                        <Grid container>
+                                            <Typography className={classes.stackTitle} variant='h3'>
+                                                Full Stack
+                                            </Typography>
+                                            <Typography className={classes.stackTitle} variant='h3'>
+                                                Software Engineer
+                                            </Typography>
+                                        </Grid>
+                                        
+                                    </Box>
+                                
+                                    <Grid container className={classes.landingButtonContainer} justifyContent='center'>
+                                        <Button className={classes.landingButton}>
+                                            <Typography variant='subtitle1'>
+                                                Say Hello
+                                            </Typography> 
+                                        </Button>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                    </Box>
             </Container>
         </>
     );

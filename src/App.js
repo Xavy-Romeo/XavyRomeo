@@ -9,6 +9,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Home from './pages/Home';
+import Content from './pages/Content';
 import theme from './theme';
 import Header from './components/Header';
 
@@ -24,7 +25,7 @@ function App() {
 
           <Switch>
             <Route path = '/Home' component={Home} />
-            <Route path='/About'>
+            <Route path='/About' component={Content}>
 
             </Route>
             <Route path='/Contact'>
@@ -37,8 +38,7 @@ function App() {
 
             </Route>
           </Switch>
-          <div className='background'>
-          </div>
+
         </Router>
       </CssBaseline>
     </ThemeProvider>
