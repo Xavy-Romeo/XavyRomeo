@@ -107,7 +107,7 @@ const useStyles = makeStyles({
     },
     landingAboutContainer: {
         margin: '60px auto 0 auto',
-        borderTop: '2px solid white',
+        borderTop: '2px solid rgba(255,255,255,.2)',
     },
     landingAbout: {
         margin: '50px 0'

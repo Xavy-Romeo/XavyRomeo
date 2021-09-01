@@ -10,8 +10,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Home from './pages/Home';
 import Content from './pages/Content';
-import theme from './theme';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import theme from './theme';
 
 import backgroundVid from './assets/videos/backgroundVid.mp4';
 
@@ -38,7 +39,8 @@ function App() {
 
             </Route>
           </Switch>
-
+          
+          <Footer />
         </Router>
       </CssBaseline>
     </ThemeProvider>
