@@ -63,7 +63,7 @@ export default function Home() {
                                 <img src={Coding} alt='Coding on a laptop with a hot coffee on the side.' style={{width: '100%'}}/>
                             </Grid>
                             <Grid item lg={6} md={8} sm={10} xs={12}>
-                                <Paper className={classes.landingPaper}>
+                                <Paper className={classes.landingPaper} elevation='10'>
                                     <Box>
                                         <Typography variant='h2'>
                                             Xavy Romeo 

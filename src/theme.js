@@ -3,6 +3,9 @@ import { createTheme } from '@material-ui/core/styles';
 const theme = createTheme({
     palette: {
         type: 'dark',
+        background: {
+            default: 'rgb(40,44,52)'
+        }
     },
     typography: {
         fontFamily: 'Playfair Display, Serif',
@@ -96,6 +99,11 @@ const theme = createTheme({
                 padding: '1em',
                 borderRadius: '4px'
             },
+        },
+        MuiPaper: {
+            root: {
+                backgroundColor: 'rgb(50,54,62)'
+            }
         }
     },
     props: {

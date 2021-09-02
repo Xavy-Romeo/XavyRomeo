@@ -8,6 +8,7 @@ import {
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import Loading from './components/Loading';
 import Home from './pages/Home';
 import Content from './pages/Content';
 import Header from './components/Header';
@@ -22,7 +23,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Router>
-          <Header />
+          <Loading />
+          {/* <Header /> */}
 
           <Switch>
             <Route path = '/Home' component={Home} />
@@ -40,7 +42,7 @@ function App() {
             </Route>
           </Switch>
           
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </CssBaseline>
     </ThemeProvider>

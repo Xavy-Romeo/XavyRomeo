@@ -17,7 +17,7 @@ export default function Header () {
             <Toolbar className={classes.toolbar}>
                 <Box className={classes.nameContainer}> 
                     <Link to='/Home' className={classes.nameLink}>
-                        <Typography className={classes.xavyTitle} variant='h1'>
+                        <Typography className={classes.xavyTitle}>
                             Xavy Romeo
                         </Typography>
                     </Link>

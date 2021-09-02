@@ -27,7 +27,7 @@ const Footer = () => {
                         <Grid item>
                             <Grid container alignItems='center'>
                                 <PeopleAltIcon className={classes.connectIcon} />
-                                <Typography variant='body1'>
+                                <Typography variant='body2'>
                                     Connect:
                                 </Typography>
                             </Grid>
@@ -51,10 +51,10 @@ const Footer = () => {
                             </Grid>
                         </Grid>
                         <Grid item>
-                            <Typography variant='body1'>
+                            <Typography variant='body2'>
                                 &copy; {new Date().getFullYear()}
                             </Typography>
-                            <Typography variant='body1'>
+                            <Typography variant='body2'>
                                 Xavy Romeo
                             </Typography>
                         </Grid>
