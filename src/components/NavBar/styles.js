@@ -50,6 +50,9 @@ const useStyles = makeStyles({
             transition: '.3s ease',
             textDecoration: 'underline'
         }
+    },
+    listSpanActive: {
+        color: 'rgb(10, 163, 194)'
     }
 });
 

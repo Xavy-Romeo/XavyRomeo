@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useLocation, NavLink } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -12,26 +12,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import useStyles from './styles';
 import SectionContext from '../../contexts/SectionContext';
+import { navActive, navSection } from '../../utils';
 
 export default function NavBar () {
   const classes = useStyles();
 
   const { setCurrentSection } = useContext(SectionContext);
-
-  const navSection = [ 
-      {name: 'About Me', to: '/Portfolio/#About'},
-      {name: 'Contact Me', to: '/Portfolio/#Contact'},
-      {name: 'Projects', to: '/Portfolio/#Projects'},
-      {name: 'Resume', to: '/Portfolio/#Resume'}
-  ]
-
-  const [location, setLocation] = useState('Home');
-
-  let presentLocation = useLocation(location);
-
-  useEffect(() => {
-    setLocation(presentLocation.pathname);
-  }, [presentLocation.pathname]);
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -87,7 +73,10 @@ export default function NavBar () {
               key={section.name}
             >
               <NavLink
-                onClick={() => setCurrentSection(section.name)}
+                onClick={() => {
+                  setCurrentSection(section.name)
+                  navActive(section.name)
+                }}
                 to={section.to} 
                 exact 
                 className={classes.navLink} 

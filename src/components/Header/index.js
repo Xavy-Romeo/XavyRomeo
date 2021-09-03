@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 
 import useStyles from './styles';
 import NavBar from '../NavBar';
+import { navActive } from '../../utils';
 
 export default function Header () {
     const classes = useStyles();
@@ -16,7 +17,11 @@ export default function Header () {
         <AppBar className={classes.appbar} id='header'>
             <Toolbar className={classes.toolbar}>
                 <Box className={classes.nameContainer}> 
-                    <Link to='/Home' className={classes.nameLink}>
+                    <Link 
+                        to='/Home' 
+                        className={classes.nameLink}
+                        onClick={navActive}
+                    >
                         <Typography className={classes.xavyTitle} variant='h1'>
                             Xavy Romeo
                         </Typography>
