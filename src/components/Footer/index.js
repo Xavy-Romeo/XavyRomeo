@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import MailIcon from '@material-ui/icons/Mail';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 
 import useStyles from './styles';
@@ -35,16 +34,14 @@ const Footer = () => {
                                 <Link 
                                     href='https://www.linkedin.com/in/xavy-romeo-722076215/'
                                     target='_blank'
-                                    rel='noopener'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                 >
                                     <LinkedInIcon className={classes.connectIcons} />
                                 </Link>
                                 <Link 
                                     href='https://github.com/Xavy-Romeo'
                                     target='_blank'
-                                    rel='noopener'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                 >
                                     <GitHubIcon className={classes.connectIcons} />
                                 </Link>

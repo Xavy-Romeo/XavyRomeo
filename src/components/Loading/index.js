@@ -5,7 +5,6 @@ import useStyles from './styles';
 import Logo from '../../assets/images/xr-loading-logo.png';
 
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 
 const Loading = () => {
     const classes = useStyles();
@@ -15,7 +14,7 @@ const Loading = () => {
             <h1 className={classes.loadingTitle}>
                 Xavy Romeo
             </h1>
-            <PulseLoader size='30' color='rgb(195, 2, 2)' />
+            <PulseLoader size={30} color='rgb(195, 2, 2)' />
             <img src={Logo} className={classes.loadingLogo} alt='loading logo'/>            
         </Box>
     )

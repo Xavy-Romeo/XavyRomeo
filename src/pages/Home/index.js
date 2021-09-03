@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import About from '../components/About';
+import Loading from '../../components/Loading';
 
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -8,18 +8,21 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import MailIcon from '@material-ui/icons/Mail';
 
 import useStyles from './styles';
 import Sea from '../../assets/images/sea.png';
-import Sun from '../../assets/images/sun.png';
 import Yatch from '../../assets/images/yatch.png';
 import Ship from '../../assets/images/pirate-ship.png';
+import Sun from '../../assets/images/sun.png';
 import Cloud from '../../assets/images/cloud.png';
 import Palm from '../../assets/images/palm-tree.png';
 import Coding from '../../assets/images/coding.svg';
 
 export default function Home() {
     const classes = useStyles();
+
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const sun = document.getElementById('sun');
@@ -31,18 +34,29 @@ export default function Home() {
 
         window.addEventListener('scroll', () => {
             var value = window.scrollY;
-           
+        
             sun.style.transform = `translate3d(-${value*.5}px, ${value*.75}px , 0px)`;
             cloud.style.transform = `translate3d(-${value*.5}px, ${value*.15}px , 0px)`;
             cloud2.style.transform = `translate3d(-${value*.5}px, ${value*.15}px , 0px)`;
             yatch.style.transform = `translate3d(-${value*2}px, ${value*.1}px , 0px)`;
             ship.style.transform = `translateX(-${value*.15}px)`;
             title.style.transform = `translateY(${value*1.5}px)`;
-        });  
-    });
+        });
+    }, []);
 
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0,0);
+            setLoaded(true);
+        }, 2000);
+    }, []);
+    
     return (
-        <>
+        <>  
+            <Box className={!loaded ? classes.loadingContainer : classes.loaded}>
+                <Loading />
+            </Box>
+
             <Box className={classes.landingPageContainer}>
                 <img src={Sun} className={classes.landingSun} id='sun' alt='sun illustration' />
                 <img src={Cloud} className={classes.landingCloud} id='cloud' alt='cloud illustration' />
@@ -56,41 +70,41 @@ export default function Home() {
                 </Typography>      
             </Box>
 
-            <Container maxWidth='xl'>
-                    <Box className={classes.landingAboutContainer}>
-                        <Grid container className={classes.landingAbout} justifyContent='center' alignItems='center'>
-                            <Grid item lg={6} md={8} sm={10} xs={12}>
-                                <img src={Coding} alt='Coding on a laptop with a hot coffee on the side.' style={{width: '100%'}}/>
-                            </Grid>
-                            <Grid item lg={6} md={8} sm={10} xs={12}>
-                                <Paper className={classes.landingPaper} elevation='10'>
-                                    <Box>
-                                        <Typography variant='h2'>
-                                            Xavy Romeo 
-                                        </Typography>
-                                        <Grid container>
-                                            <Typography className={classes.stackTitle} variant='h3'>
-                                                Full Stack
-                                            </Typography>
-                                            <Typography className={classes.stackTitle} variant='h3'>
-                                                Software Engineer
-                                            </Typography>
-                                        </Grid>
-                                        
-                                    </Box>
-                                
-                                    <Grid container className={classes.landingButtonContainer} justifyContent='center'>
-                                        <Button className={classes.landingButton}>
-                                            <Typography variant='subtitle1'>
-                                                Say Hello
-                                            </Typography> 
-                                        </Button>
-                                    </Grid>
-                                </Paper>
-                            </Grid>
+            <Container maxWidth='xl' id='landing-about'>
+                <Box className={classes.landingAboutContainer}>
+                    <Grid container className={classes.landingAbout} justifyContent='center' alignItems='center'>
+                        <Grid item lg={6} md={8} sm={10} xs={12}>
+                            <img src={Coding} alt='Coding on a laptop with a hot coffee on the side.' width='100%' />
                         </Grid>
-                    </Box>
+                        <Grid item lg={6} md={8} sm={10} xs={12}>
+                            <Paper className={classes.landingPaper} elevation={10}>
+                                <Box>
+                                    <Typography variant='h2'>
+                                        Xavy Romeo 
+                                    </Typography>
+                                    <Grid container>
+                                        <Typography className={classes.stackTitle} variant='h3'>
+                                            Full Stack
+                                        </Typography>
+                                        <Typography className={classes.stackTitle} variant='h3'>
+                                            Software Engineer
+                                        </Typography>
+                                    </Grid>
+                                </Box>
+                            
+                                <Grid container className={classes.landingButtonContainer} justifyContent='center'>
+                                    <Button className={classes.landingButton}>
+                                        <MailIcon className={classes.mailIcon} />
+                                        <Typography variant='subtitle1'>
+                                            Say Hello
+                                        </Typography> 
+                                    </Button>
+                                </Grid>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Box>
             </Container>
-        </>
+        </> 
     );
 };

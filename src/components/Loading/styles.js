@@ -19,7 +19,7 @@ const useStyles = makeStyles({
         '@media (max-width:700px)': {
             fontSize: '5rem',
         },
-        '@media (max-width:700px)': {
+        '@media (max-width:450px)': {
             fontSize: '3.5rem',
         },
     },

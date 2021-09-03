@@ -8,14 +8,11 @@ import {
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Loading from './components/Loading';
 import Home from './pages/Home';
 import Content from './pages/Content';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import theme from './theme';
-
-import backgroundVid from './assets/videos/backgroundVid.mp4';
 
 function App() {
 
@@ -23,11 +20,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Router>
-          <Loading />
-          {/* <Header /> */}
+          <Header />
 
           <Switch>
             <Route path = '/Home' component={Home} />
+            
+            
             <Route path='/About' component={Content}>
 
             </Route>
@@ -42,7 +40,7 @@ function App() {
             </Route>
           </Switch>
           
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </CssBaseline>
     </ThemeProvider>

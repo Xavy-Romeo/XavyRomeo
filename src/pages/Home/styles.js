@@ -1,6 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+    loadingContainer: {
+        position: 'absolute',
+        right: 0,
+        left: 0,
+        top: 0,
+        bottom: -1200,
+        zIndex: 9999,
+        backgroundColor: 'rgb(40,44,52)'
+    },
+    loaded: {
+        height: 0
+    },
     landingPageContainer: {
         position: 'relative',
         width: '100%',
@@ -26,6 +38,19 @@ const useStyles = makeStyles({
         right: '8%',
         top: '8%',
         zIndex: '5',
+        '@media (max-width:500px)': {
+            top: '15%',
+        } 
+    },
+    landingSunLoading: {
+        position: 'absolute',
+        height: '20vh',
+        right: '8%',
+        top: '8%',
+        zIndex: '5',
+        borderRadius: '50%',
+        border: '1px solid black',
+        backgroundColor: 'yellow',
         '@media (max-width:500px)': {
             top: '15%',
         } 
@@ -137,6 +162,9 @@ const useStyles = makeStyles({
         '@media (min-width:1500px)': {
             width: '30%',
         }
+    },
+    mailIcon: {
+        marginRight: '8px'
     }
 });
 
