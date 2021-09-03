@@ -11,7 +11,8 @@ const useStyles = makeStyles({
         backgroundColor: 'rgb(40,44,52)'
     },
     loaded: {
-        height: 0
+        height: 0,
+        opacity: 0
     },
     landingPageContainer: {
         position: 'relative',

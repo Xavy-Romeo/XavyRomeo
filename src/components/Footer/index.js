@@ -58,7 +58,6 @@ const Footer = () => {
 
                     </Grid>
                 </Container>
-                
             </Box>
         </footer>
     )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   BrowserRouter as Router,
   Switch,
@@ -9,38 +9,31 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Home from './pages/Home';
-import Content from './pages/Content';
+import Portfolio from './pages/Portfolio';
+import Page404 from './pages/Page404';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import theme from './theme';
+import SectionContext from './contexts/SectionContext';
 
 function App() {
+
+  const [ currentSection, setCurrentSection ] = useState('');
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Router>
-          <Header />
-
-          <Switch>
-            <Route path = '/Home' component={Home} />
-            
-            
-            <Route path='/About' component={Content}>
-
-            </Route>
-            <Route path='/Contact'>
-
-            </Route>
-            <Route path='/Projects'>
-
-            </Route>
-            <Route path='/Resume'>
-
-            </Route>
-          </Switch>
-          
-          <Footer />
+          <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
+            <Header />
+            <Switch>
+              <Route path = '/' component={Home} exact />
+              <Route path = '/Home' component={Home} exact />
+              <Route path ='/Portfolio' component={Portfolio} exact />
+              <Route path = '*' component={Page404} />
+            </Switch>      
+            <Footer />
+          </SectionContext.Provider>
         </Router>
       </CssBaseline>
     </ThemeProvider>
