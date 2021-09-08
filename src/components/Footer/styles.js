@@ -22,6 +22,7 @@ const useStyles = makeStyles({
         margin: '0 7px',
         color: 'rgba(255,255,255,.87)', 
         fontSize: '1.5rem',
+        cursor: 'pointer',
         '&:hover': {
             color: 'rgb(10, 163, 194)'
         }

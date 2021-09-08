@@ -72,15 +72,20 @@ const theme = createTheme({
                 fontSize: '0.875rem'
             }
         },
-        specialText:{
+        h6:{
+            fontFamily: 'Londrina Outline, sans-sefif',
             fontSize:'6rem',
+            fontWeight: 300,
+            fontSize: "6rem",
+            lineHeight: 1.167,
+            letterSpacing: "-0.01562em",
             '@media (min-width:960px)': {
                 fontSize: '7.5rem'
             },
             '@media (max-width:600px)': {
                 fontSize: '4.5rem'
             }
-        }, 
+        },
     },
     breakpoints: {
         values: {
