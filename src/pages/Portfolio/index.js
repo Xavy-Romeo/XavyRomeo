@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 
 import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 
 import Loading from '../../components/Loading';
 import About from '../../components/About';
@@ -32,17 +33,19 @@ const Portfolio = () => {
                 className={classes.contentPageContainer}
                 style={{height: 'calc(100vh - 80px)', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
             >
-                {currentSection === 'Contact Me' &&
-                    <Contact />
-                }
-                {currentSection === 'Projects' &&
-                    <Projects />
-                }
-                {currentSection === 'Resume' &&
-                    <Resume />
-                }
+                <Container maxWidth='xl'>   
+                    {currentSection === 'Contact Me' &&
+                        <Contact />
+                    }
+                    {currentSection === 'Projects' &&
+                        <Projects />
+                    }
+                    {currentSection === 'Resume' &&
+                        <Resume />
+                    }
 
-                <About />
+                    <About />
+                </Container>
             </Box>
         </>
     )
