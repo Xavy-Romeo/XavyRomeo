@@ -44,6 +44,13 @@ const useStyles = makeStyles({
         '@media (min-width:1500px)': {
             width: '30%',
         }
+    },
+    logos: {
+        height: '100px',
+        width: '100px',
+        padding: '15px',
+        // margin: '10px',
+        background: 'white',
     }
 });
 

@@ -1,16 +1,43 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardHeader from '@material-ui/core/CardHeader';
 
 import useStyles from './styles';
 import Avatar from '../../assets/images/avatar.png';
+import Css from '../../assets/images/css.png';
+import Express from '../../assets/images/express.png';
+import Git from '../../assets/images/git.png';
+import Html from '../../assets/images/html.png';
+import Js from '../../assets/images/js.png';
+import Mongo from '../../assets/images/mongo.png';
+import Mui from '../../assets/images/mui.png';
+import MySql from '../../assets/images/mysql.png';
+import Node from '../../assets/images/node.png';
+import ReactLogo from '../../assets/images/react.png'
 
 const About = () => {
     const classes = useStyles();
+
+    const logos = [
+        {logo: Html, name: 'HTML'}, 
+        {logo: Css, name: 'CSS'}, 
+        {logo: Js, name: 'JS'}, 
+        {logo: ReactLogo, name: 'REACT'}, 
+        {logo: Mui, name: 'MATERIAL-UI'}, 
+        {logo: Git, name: 'GIT'}, 
+        {logo: Node, name: 'NODE'}, 
+        {logo: Express, name: 'EXPRESS'},
+        {logo: MySql, name: 'MYSQL'}, 
+        {logo: Mongo, name: 'MONGO'}, 
+    ];
 
     return (
         <>
@@ -49,8 +76,30 @@ const About = () => {
                     </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper style={{height:'200px'}}>
-                        SKILLS
+                    <Paper style={{padding: '10px'}}>
+                        <Grid container alignItems='center' direction='column'>
+                            <Grid item>
+                                <Typography>
+                                    SKILLS
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Grid container>
+                                    {logos.map((img) => (
+                                        <div style={{ margin: '5px', paddingTop: '20px', width: '150px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                            <CardMedia>
+                                                <img src={img.logo} key={img.name} className={classes.logos} />
+                                            </CardMedia>
+                                            <CardContent>
+                                                <Typography variant='body2'>
+                                                    {img.name}
+                                                </Typography>
+                                            </CardContent>
+                                        </div>
+                                    ))}
+                                </Grid>
+                            </Grid>
+                        </Grid> 
                     </Paper>
                 </Grid>
                 <Grid item >
