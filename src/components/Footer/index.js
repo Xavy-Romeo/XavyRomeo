@@ -35,6 +35,7 @@ const Footer = () => {
                                     href='https://www.linkedin.com/in/xavy-romeo-722076215/'
                                     target='_blank'
                                     rel='noopener noreferrer'
+                                    aria-label='linked in profile'
                                 >
                                     <LinkedInIcon className={classes.connectIcons} />
                                 </Link>
@@ -42,6 +43,7 @@ const Footer = () => {
                                     href='https://github.com/Xavy-Romeo'
                                     target='_blank'
                                     rel='noopener noreferrer'
+                                    aria-label='github profile'
                                 >
                                     <GitHubIcon className={classes.connectIcons} />
                                 </Link>

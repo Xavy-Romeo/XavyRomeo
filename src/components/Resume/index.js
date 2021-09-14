@@ -26,12 +26,13 @@ const Resume = () => {
             </Grid>
             <Grid container justifyContent='center'>
                 <Grid item xs={12}>
-                    <img src={ResumeImg} className={classes.resumeImg} />
+                    <img src={ResumeImg} className={classes.resumeImg} alt='resume'/>
                 </Grid>
                 <Link 
                     download='Xavy Romeo - Resume'
                     href={ResumePdf}
                     underline='none'
+                    aria-label='download resume button'
                 >
                     <Button className={classes.resumeButton}>
                         <Typography variant='subtitle2'>

@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({ 
     sectionTitleContainer: {
-        position: 'relative'
+        position: 'relative',
+        marginTop: '50px'
     },
     sectionTitleShadow: {
         textAlign: 'center',
