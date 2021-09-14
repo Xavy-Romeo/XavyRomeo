@@ -72,6 +72,15 @@ const theme = createTheme({
                 fontSize: '0.875rem'
             }
         },
+        overline:{
+            fontSize:'0.5rem',
+            '@media (min-width:600px)': {
+                fontSize: '0.75rem'
+            },
+            '@media (min-width:1280px)': {
+                fontSize: '0.875rem'
+            },
+        },
         h6:{
             fontFamily: 'Londrina Outline, sans-sefif',
             fontSize:'7.5rem',

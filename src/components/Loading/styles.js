@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     loadingContainer: {
         height: '100vh',
-        width: '100vw',
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

@@ -4,44 +4,47 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardHeader from '@material-ui/core/CardHeader';
+import Box from '@material-ui/core/Box';
 
 import useStyles from './styles';
 import Avatar from '../../assets/images/avatar.png';
-import Css from '../../assets/images/css.png';
-import Express from '../../assets/images/express.png';
-import Git from '../../assets/images/git.png';
-import Html from '../../assets/images/html.png';
-import Js from '../../assets/images/js.png';
-import Mongo from '../../assets/images/mongo.png';
-import Mui from '../../assets/images/mui.png';
-import MySql from '../../assets/images/mysql.png';
-import Node from '../../assets/images/node.png';
-import ReactLogo from '../../assets/images/react.png'
+import Css from '../../assets/images/css.svg';
+import Express from '../../assets/images/express.svg';
+import Git from '../../assets/images/git.svg';
+import Html from '../../assets/images/html.svg';
+import Js from '../../assets/images/js.svg';
+import Mongo from '../../assets/images/mongo.svg';
+import Mui from '../../assets/images/mui.svg';
+import MySql from '../../assets/images/mysql.svg';
+import Node from '../../assets/images/node.svg';
+import ReactLogo from '../../assets/images/react.svg';
+import GraphQL from '../../assets/images/graphql.svg';
+import Jest from '../../assets/images/jest.svg';
+import Stripe from '../../assets/images/stripe.svg';
+import JQuery from '../../assets/images/jquery.svg';
 
 const About = () => {
     const classes = useStyles();
 
     const logos = [
+        {logo: ReactLogo, name: 'REACT'}, 
+        {logo: Mui, name: 'MATERIAL-UI'},
         {logo: Html, name: 'HTML'}, 
         {logo: Css, name: 'CSS'}, 
         {logo: Js, name: 'JS'}, 
-        {logo: ReactLogo, name: 'REACT'}, 
-        {logo: Mui, name: 'MATERIAL-UI'}, 
+        {logo: JQuery, name: 'JQUERY'},
         {logo: Git, name: 'GIT'}, 
         {logo: Node, name: 'NODE'}, 
         {logo: Express, name: 'EXPRESS'},
+        {logo: Jest, name: 'JEST'},
+        {logo: Stripe, name: 'STRIPE'},
         {logo: MySql, name: 'MYSQL'}, 
-        {logo: Mongo, name: 'MONGO'}, 
+        {logo: Mongo, name: 'MONGO'},
+        {logo: GraphQL, name: 'GRAPHQL'} 
     ];
 
     return (
         <>
-        {/* <Paper> */}
             <Grid container className={classes.sectionTitleContainer} justifyContent='center'>
                 <Typography className={classes.sectionTitleShadow} variant='h6'>
                     ABOUT
@@ -50,11 +53,11 @@ const About = () => {
                     About Xavy
                 </Typography>
             </Grid>
-            <Grid container alignItems='center'>
-                <Grid item xs={3}>
+            <Grid container className={classes.aboutContainer} alignItems='center'>
+                <Grid item className={classes.avatarContainer} xs={12} lg={4} xl={3} >
                     <img src={Avatar} className={classes.avatarImg} alt='Avatar of Xavy Romeo' />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} lg={8} xl={6}>
                     <Paper className={classes.aboutPaper}>
                         <Typography variant='h5' className={classes.aboutContent}>
                             I am Xavy Romeo, a Fullstack Software Engineer.
@@ -76,7 +79,7 @@ const About = () => {
                     </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper style={{padding: '10px'}}>
+                    <Paper className={classes.skillsContainer}>
                         <Grid container alignItems='center' direction='column'>
                             <Grid item>
                                 <Typography>
@@ -86,37 +89,42 @@ const About = () => {
                             <Grid item>
                                 <Grid container>
                                     {logos.map((img) => (
-                                        <div style={{ margin: '5px', paddingTop: '20px', width: '150px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                                            <CardMedia>
-                                                <img src={img.logo} key={img.name} className={classes.logos} />
-                                            </CardMedia>
-                                            <CardContent>
-                                                <Typography variant='body2'>
+                                        <Grid item xs={3} sm={2}>
+                                            <Box className={classes.logosContainer}>
+                                                <img src={img.logo} key={img.name} className={classes.logos} alt='icon' />
+                                                <Typography variant='overline'>
                                                     {img.name}
                                                 </Typography>
-                                            </CardContent>
-                                        </div>
+                                            </Box>
+                                        </Grid>
                                     ))}
                                 </Grid>
                             </Grid>
                         </Grid> 
                     </Paper>
                 </Grid>
-                <Grid item >
-                    <Typography variant='h5'>
-                        Let's work together!
-                    </Typography>
-                    <Typography>
-                        I am available fulltime. Hire me to get what you need done.
-                    </Typography>
-                    <Button>
-                        Hire Me
-                    </Button>
+                <Grid item xs={12}>
+                    <Grid container justifyContent='space-between'>
+                        <Grid item xs={12} sm={9} md={7} xl={4}>
+                            <Typography variant='h5'>
+                                Let's work together!
+                            </Typography>
+                            <Typography>
+                                I am available fulltime. Hire me to get what you need done.
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={3} md={5} xl={8}>    
+                            <Button className={classes.hireButton}>
+                                <Typography>
+                                    Hire Me
+                                </Typography>
+                            </Button>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
-        {/* </Paper> */}
         </>
     )
-}
+};
 
 export default About;

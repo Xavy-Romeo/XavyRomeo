@@ -1,11 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-    appbar: {
+    appbarDark: {
+        height: '75px',
+        boxShadow: 'none',
+        // background: 'linear-gradient(to bottom, black, rgba(0,0,0,.4) 70%, rgba(0,0,0,0))',
+        background: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.95) 60%, rgba(0,0,0,.4) 90%, rgba(0,0,0,.05))'
+    },
+    appbarLight: {
         height: '75px',
         background: 'linear-gradient(to bottom, black, rgba(0,0,0,.4) 70%, rgba(0,0,0,0))',
-        boxShadow: 'none'
-    },
+        boxShadow: 'none',
+    }, 
     toolbar: {
         justifyContent: 'space-between',
         margin: 'auto 0'

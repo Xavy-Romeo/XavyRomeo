@@ -29,24 +29,19 @@ const Portfolio = () => {
             <Box className={!loaded ? classes.loadingContainer : classes.loaded}>
                 <Loading />
             </Box>
-            <Box 
-                className={classes.contentPageContainer}
-                style={{height: 'calc(100vh - 80px)', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
-            >
-                <Container maxWidth='xl'>   
-                    {currentSection === 'Contact Me' &&
-                        <Contact />
-                    }
-                    {currentSection === 'Projects' &&
-                        <Projects />
-                    }
-                    {currentSection === 'Resume' &&
-                        <Resume />
-                    }
+            <Container maxWidth='xl'>   
+                {currentSection === 'Contact Me' &&
+                    <Contact />
+                }
+                {currentSection === 'Projects' &&
+                    <Projects />
+                }
+                {currentSection === 'Resume' &&
+                    <Resume />
+                }
 
-                    <About />
-                </Container>
-            </Box>
+                <About />
+            </Container>
         </>
     )
 }
