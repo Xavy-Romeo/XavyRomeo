@@ -28,7 +28,7 @@ function App() {
             <Header />
             <Switch>
               <Route path = '/' component={Home} exact />
-              <Route path = '/XavyRomeo' component={Home} exact />
+              <Route path = '/XavyRomeo' component={Home} exact/>
               <Route path = '/Home' component={Home} exact />
               <Route path ='/Portfolio' component={Portfolio} exact />
               <Route path = '*' component={Page404} />
