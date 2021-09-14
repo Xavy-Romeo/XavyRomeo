@@ -9,6 +9,8 @@ import Box from '@material-ui/core/Box';
 const Loading = () => {
     const classes = useStyles();
 
+    window.scrollTo(0,0);
+
     return (
         <Box className={classes.loadingContainer}>
             <h1 className={classes.loadingTitle}>

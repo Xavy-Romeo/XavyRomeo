@@ -8,40 +8,12 @@ import Box from '@material-ui/core/Box';
 
 import useStyles from './styles';
 import Avatar from '../../assets/images/avatar.png';
-import Css from '../../assets/images/css.svg';
-import Express from '../../assets/images/express.svg';
-import Git from '../../assets/images/git.svg';
-import Html from '../../assets/images/html.svg';
-import Js from '../../assets/images/js.svg';
-import Mongo from '../../assets/images/mongo.svg';
-import Mui from '../../assets/images/mui.svg';
-import MySql from '../../assets/images/mysql.svg';
-import Node from '../../assets/images/node.svg';
-import ReactLogo from '../../assets/images/react.svg';
-import GraphQL from '../../assets/images/graphql.svg';
-import Jest from '../../assets/images/jest.svg';
-import Stripe from '../../assets/images/stripe.svg';
-import JQuery from '../../assets/images/jquery.svg';
+import { logos } from '../../utils';
 
 const About = () => {
     const classes = useStyles();
 
-    const logos = [
-        {logo: ReactLogo, name: 'REACT'}, 
-        {logo: Mui, name: 'MATERIAL-UI'},
-        {logo: Html, name: 'HTML'}, 
-        {logo: Css, name: 'CSS'}, 
-        {logo: Js, name: 'JS'}, 
-        {logo: JQuery, name: 'JQUERY'},
-        {logo: Git, name: 'GIT'}, 
-        {logo: Node, name: 'NODE'}, 
-        {logo: Express, name: 'EXPRESS'},
-        {logo: Jest, name: 'JEST'},
-        {logo: Stripe, name: 'STRIPE'},
-        {logo: MySql, name: 'MYSQL'}, 
-        {logo: Mongo, name: 'MONGO'},
-        {logo: GraphQL, name: 'GRAPHQL'} 
-    ];
+    window.scrollTo(0,0);
 
     return (
         <>
@@ -71,7 +43,7 @@ const About = () => {
                         </Typography>
                         <Grid container justifyContent='center'>
                             <Button className={classes.projectsButton}>
-                                <Typography>
+                                <Typography variant='subtitle2'>
                                     My Projects
                                 </Typography>
                             </Button>
@@ -82,16 +54,16 @@ const About = () => {
                     <Paper className={classes.skillsContainer}>
                         <Grid container alignItems='center' direction='column'>
                             <Grid item>
-                                <Typography>
+                                <Typography variant='subtitle2'>
                                     SKILLS
                                 </Typography>
                             </Grid>
                             <Grid item>
                                 <Grid container>
                                     {logos.map((img) => (
-                                        <Grid item xs={3} sm={2}>
+                                        <Grid item key={img.name} xs={3} sm={2}>
                                             <Box className={classes.logosContainer}>
-                                                <img src={img.logo} key={img.name} className={classes.logos} alt='icon' />
+                                                <img src={img.logo} className={classes.logos} alt='icon' />
                                                 <Typography variant='overline'>
                                                     {img.name}
                                                 </Typography>
@@ -115,7 +87,7 @@ const About = () => {
                         </Grid>
                         <Grid item xs={12} sm={3} md={5} xl={8}>    
                             <Button className={classes.hireButton}>
-                                <Typography>
+                                <Typography variant='subtitle2'>
                                     Hire Me
                                 </Typography>
                             </Button>

@@ -107,7 +107,7 @@ const theme = createTheme({
             root: {
                 textTransform: 'none',
                 padding: '1em',
-                borderRadius: '4px'
+                borderRadius: '4px',
             },
         },
         MuiPaper: {

@@ -8,6 +8,8 @@ import useStyles from './styles';
 const Projects = () => {
     const classes = useStyles();
 
+    window.scrollTo(0,0);
+
     return (
         <>
             <Grid container className={classes.sectionTitleContainer} justifyContent='center'>
