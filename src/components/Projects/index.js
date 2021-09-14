@@ -22,20 +22,28 @@ const Projects = () => {
                 </Typography>
             </Grid>
             
-                <Paper style={{width: '100%', padding: '50px 30px'}}>
+                <Paper style={{width: '100%', padding: '30px'}}>
                     <Grid container justifyContent='center'>
-                    <div style={{margin: '20px 25px', height: '400px', width: '250px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
-                        HELLO
-                    </div>
-                    <div style={{margin: '20px 25px', height: '400px', width: '250px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
-                        HELLO
-                    </div>
-                    <div style={{margin: '20px 25px', height: '400px', width: '250px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
-                        HELLO
-                    </div>
-                    <div style={{margin: '20px 25px', height: '400px', width: '250px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
-                        HELLO
-                    </div>
+                        <Grid item xs={12} sm={6} lg={3} style={{marginTop:'20px'}}>
+                            <div style={{margin: '0 auto', height: '400px', width: '275px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
+                                HELLO
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={3} style={{marginTop:'20px'}}>
+                            <div style={{margin: '0 auto', height: '400px', width: '275px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
+                                HELLO
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={3} style={{marginTop:'20px'}}>
+                            <div style={{margin: '0 auto', height: '400px', width: '275px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
+                                HELLO
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={3} style={{marginTop:'20px'}}>
+                            <div style={{margin: '0 auto', height: '400px', width: '275px', background: 'rgba(255,255,255,.05)', borderLeft: 'solid 1px rgba(255,255,255,.5)', borderTop: 'solid 1px rgba(255,255,255,.5)', borderRadius: '5px', boxShadow: '20px 20px 50px rgba(0,0,0,.5)'}}>
+                                HELLO
+                            </div>
+                        </Grid>
                     </Grid>
                 </Paper>
             
