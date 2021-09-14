@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -7,13 +8,18 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
 import useStyles from './styles';
+import SectionContext from '../../contexts/SectionContext';
+import { navActive } from '../../utils';
 import Avatar from '../../assets/images/avatar.png';
-import { logos } from '../../utils';
+import logos from './skillLogos';
+
 
 const About = () => {
     const classes = useStyles();
 
     window.scrollTo(0,0);
+
+    const { setCurrentSection } = useContext(SectionContext);
 
     return (
         <>
@@ -42,11 +48,20 @@ const About = () => {
                             Take a look at my projects and see if my knowledge fits what you are looking for.  
                         </Typography>
                         <Grid container justifyContent='center'>
-                            <Button className={classes.projectsButton}>
-                                <Typography variant='subtitle2'>
-                                    My Projects
-                                </Typography>
-                            </Button>
+                            <Link
+                                style={{width: '100%', height: '100%', textDecoration: 'none', color: 'black', display: 'flex', justifyContent: 'center'}}
+                                to='#Projects'
+                                onClick={() => {
+                                    setCurrentSection('Projects')
+                                    navActive('Projects')
+                                }}
+                            >
+                                <Button className={classes.projectsButton}>
+                                    <Typography variant='subtitle2'>
+                                        My Projects
+                                    </Typography>
+                                </Button> 
+                            </Link>
                         </Grid>
                     </Paper>
                 </Grid>
@@ -85,12 +100,21 @@ const About = () => {
                                 I am available fulltime. Hire me to get what you need done.
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} sm={3} md={5} xl={8}>    
-                            <Button className={classes.hireButton}>
-                                <Typography variant='subtitle2'>
-                                    Hire Me
-                                </Typography>
-                            </Button>
+                        <Grid item xs={12} sm={3} md={5} xl={8}>
+                            <Link
+                                style={{width: '100%', height: '100%', textDecoration: 'none', color: 'black'}}
+                                to='#Projects'
+                                onClick={() => {
+                                    setCurrentSection('Contact Me')
+                                    navActive('Contact Me')
+                                }}
+                            >
+                                <Button className={classes.hireButton}>
+                                    <Typography variant='subtitle2'>
+                                        Hire Me
+                                    </Typography>
+                                </Button>
+                            </Link> 
                         </Grid>
                     </Grid>
                 </Grid>

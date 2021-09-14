@@ -48,17 +48,15 @@ const useStyles = makeStyles({
         marginBottom: '10px'
     },
     projectsButton: {
-        width: '40%',
+        width: '400px',
         background: 'linear-gradient(rgba(55,188,241,1), white, rgba(55,188,241,1))',
         '&:hover': {
             background: 'linear-gradient(transparent, rgba(55,188,241,1), transparent)',
         },
         '@media (max-width:700px)': {
-            width: '90%',
-        },
-        '@media (min-width:1500px)': {
-            width: '30%',
+            width: '100%'
         }
+
     },
     skillsContainer: {
         padding: '10px', 

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import Loading from '../../components/Loading';
 
@@ -11,6 +12,8 @@ import Paper from '@material-ui/core/Paper';
 import MailIcon from '@material-ui/icons/Mail';
 
 import useStyles from './styles';
+import SectionContext from '../../contexts/SectionContext';
+import { navActive } from '../../utils';
 import Sea from '../../assets/images/sea.png';
 import Yatch from '../../assets/images/yatch.png';
 import Ship from '../../assets/images/pirate-ship.png';
@@ -22,7 +25,11 @@ import Coding from '../../assets/images/coding.svg';
 export default function Home() {
     const classes = useStyles();
 
+    window.scrollTo(0,0);
+
     const [loaded, setLoaded] = useState(false);
+
+    const { setCurrentSection } = useContext(SectionContext);
 
     useEffect(() => {
         const sun = document.getElementById('sun');
@@ -93,12 +100,21 @@ export default function Home() {
                                 </Box>
                             
                                 <Grid container className={classes.landingButtonContainer} justifyContent='center'>
-                                    <Button className={classes.landingButton}>
-                                        <MailIcon className={classes.mailIcon} />
-                                        <Typography variant='subtitle1'>
-                                            Say Hello
-                                        </Typography> 
-                                    </Button>
+                                    <Link
+                                        style={{width: '100%', height: '100%', textDecoration: 'none', color: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+                                        to='Portfolio/#Projects'
+                                        onClick={() => {
+                                            setCurrentSection('Contact Me')
+                                            navActive('Contact Me')
+                                        }}
+                                    >
+                                        <Button className={classes.landingButton}>
+                                            <MailIcon className={classes.mailIcon} />
+                                            <Typography variant='subtitle1'>
+                                                Say Hello
+                                            </Typography>
+                                        </Button>
+                                    </Link>
                                 </Grid>
                             </Paper>
                         </Grid>
