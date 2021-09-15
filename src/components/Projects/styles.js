@@ -43,7 +43,6 @@ const useStyles = makeStyles({
     imageContainer: {
         width: '100%',
         height: '125px',
-        // marginTop: '15px',
         border: '1px solid black',
         borderRadius: '4px',
         padding: '3px',

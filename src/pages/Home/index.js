@@ -102,7 +102,7 @@ export default function Home() {
                                 <Grid container className={classes.landingButtonContainer} justifyContent='center'>
                                     <Link
                                         style={{width: '100%', height: '100%', textDecoration: 'none', color: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
-                                        to='Portfolio/#Projects'
+                                        to='Portfolio/'
                                         onClick={() => {
                                             setCurrentSection('Contact Me')
                                             navActive('Contact Me')
