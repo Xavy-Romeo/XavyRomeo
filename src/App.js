@@ -31,6 +31,7 @@ function App() {
               <Route path = '/XavyRomeo' component={Home} exact/>
               <Route path = '/Home' component={Home} exact />
               <Route path ='/Portfolio' component={Portfolio} exact />
+              <Route path ='/XavyRomeo/Portfolio' component={Portfolio} exact />
               <Route path = '*' component={Page404} />
             </Switch>      
             <Footer />
