@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/XavyRomeo/static/css/main.465c2664.chunk.css",
-    "main.js": "/XavyRomeo/static/js/main.ae6eb4ab.chunk.js",
-    "main.js.map": "/XavyRomeo/static/js/main.ae6eb4ab.chunk.js.map",
+    "main.js": "/XavyRomeo/static/js/main.c8153e8d.chunk.js",
+    "main.js.map": "/XavyRomeo/static/js/main.c8153e8d.chunk.js.map",
     "runtime-main.js": "/XavyRomeo/static/js/runtime-main.e3510d07.js",
     "runtime-main.js.map": "/XavyRomeo/static/js/runtime-main.e3510d07.js.map",
     "static/js/2.10350897.chunk.js": "/XavyRomeo/static/js/2.10350897.chunk.js",
@@ -45,6 +45,6 @@
     "static/js/runtime-main.e3510d07.js",
     "static/js/2.10350897.chunk.js",
     "static/css/main.465c2664.chunk.css",
-    "static/js/main.ae6eb4ab.chunk.js"
+    "static/js/main.c8153e8d.chunk.js"
   ]
 }
