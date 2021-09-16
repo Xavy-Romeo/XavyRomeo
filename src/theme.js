@@ -114,6 +114,25 @@ const theme = createTheme({
             root: {
                 backgroundColor: 'rgb(50,54,62)'
             }
+        }, 
+        MuiMenu: {
+            paper: {
+                width: '80%',
+                height: '50%',
+                background: 'rgba(0,0,0,.98)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }
+        },
+        MuiMenuItem: {
+            root: {
+                margin: '20px auto',
+                justifyContent: 'center',
+                '&:hover': {
+                    border: '1px solid rgb(55,188,241)'
+                },
+            }
         }
     },
     props: {

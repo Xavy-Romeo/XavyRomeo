@@ -19,6 +19,9 @@ const useStyles = makeStyles({
             backgroundColor: 'rgb(100,100,100,0.3)'
         }
     },
+    menuItem: {
+        fontSize: '40px'
+    }, 
     navLink: {
         textDecoration: 'none',
         color: 'rgba(255,255,255,.87)'

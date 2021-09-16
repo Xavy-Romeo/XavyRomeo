@@ -56,7 +56,7 @@ export default function NavBar () {
                   exact 
                   className={classes.navLink}
                 >
-                  <Typography  id={section.name}>
+                  <Typography  id={section.name} className={classes.menuItem}>
                     {section.name}
                   </Typography>
                 </NavLink>
