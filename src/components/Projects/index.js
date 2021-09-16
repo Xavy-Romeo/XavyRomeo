@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -6,14 +6,49 @@ import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import Modal from '@material-ui/core/Modal';
 
 import useStyles from './styles';
 import projects from './projects';
+
+
+function rand() {
+    return Math.round(Math.random() * 20) - 10;
+  };
+  
+  function getModalStyle() {
+    const top = 50 + rand();
+    const left = 50 + rand();
+  
+    return {
+      top: `${top}%`,
+      left: `${left}%`,
+      transform: `translate(-${top}%, -${left}%)`,
+    };
+  };
 
 const Projects = () => {
     const classes = useStyles();
 
     window.scrollTo(0,0);
+
+    const [open, setOpen] = useState(false);
+  
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+    const body = (
+        <Box style={{position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Box className={classes.paper}>
+                <Modal />
+            </Box>
+        </Box>
+      );
 
     return (
         <>
@@ -53,7 +88,7 @@ const Projects = () => {
                                         </Paper>
                                     </Box>
                                     <Box>
-                                        <Link
+                                        {/* <Link
                                             href={project.deployed}
                                             target='_blank' 
                                             rel='noreferrer noopener'
@@ -62,7 +97,18 @@ const Projects = () => {
                                             <Button className={classes.cardButton}>
                                                 Live
                                             </Button>
-                                        </Link>
+                                        </Link> */}
+                                        <Button onClick={handleOpen}>
+                                            open Modal
+                                        </Button>
+                                        <Modal
+                                            open={open}
+                                            onClose={handleClose}
+                                            aria-labelledby="simple-modal-title"
+                                            aria-describedby="simple-modal-description"
+                                        >
+                                            {body}
+                                        </Modal>
                                         <Link
                                             href={project.github}
                                             target='_blank' 
