@@ -29,6 +29,7 @@ const useStyles = makeStyles({
         background: 'rgba(255,255,255,.25)', 
         borderRadius: '5px',
         minHeight: '500px',
+        overflow: 'hidden',
         '@media (max-width:1150px)': {
             height: '90%',
             top: '5%',

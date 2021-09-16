@@ -103,7 +103,7 @@ const About = () => {
                         <Grid item xs={12} sm={3} md={5} xl={8}>
                             <Link
                                 style={{width: '100%', height: '100%', textDecoration: 'none', color: 'black'}}
-                                to='#Projects'
+                                to='#Contact'
                                 onClick={() => {
                                     setCurrentSection('Contact Me')
                                     navActive('Contact Me')

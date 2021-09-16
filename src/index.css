@@ -7,3 +7,46 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.sent {
+  width: 90%;
+  height: 70px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: black;
+  font-weight: bold;
+}
+
+.success {
+  background: rgba(0, 230, 64, .7);
+  animation: formStatus 4s linear 1;
+}
+
+.error {
+  background: rgba(242, 38, 19, .7);
+  animation: formStatus 4s linear 1;
+}
+
+@keyframes formStatus {
+  0% {
+    transform: translateX(100%);
+    opacity: 0
+  }
+  15% {
+    transform: translateX(0);
+    opacity: 1
+  }
+  60% {
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(0);
+    opacity: .5
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0
+  }
+}
