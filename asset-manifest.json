@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/XavyRomeo/static/css/main.465c2664.chunk.css",
-    "main.js": "/XavyRomeo/static/js/main.5328a242.chunk.js",
-    "main.js.map": "/XavyRomeo/static/js/main.5328a242.chunk.js.map",
+    "main.css": "/XavyRomeo/static/css/main.7367b14d.chunk.css",
+    "main.js": "/XavyRomeo/static/js/main.1acd0bfd.chunk.js",
+    "main.js.map": "/XavyRomeo/static/js/main.1acd0bfd.chunk.js.map",
     "runtime-main.js": "/XavyRomeo/static/js/runtime-main.e3510d07.js",
     "runtime-main.js.map": "/XavyRomeo/static/js/runtime-main.e3510d07.js.map",
-    "static/js/2.10350897.chunk.js": "/XavyRomeo/static/js/2.10350897.chunk.js",
-    "static/js/2.10350897.chunk.js.map": "/XavyRomeo/static/js/2.10350897.chunk.js.map",
+    "static/js/2.de1860c1.chunk.js": "/XavyRomeo/static/js/2.de1860c1.chunk.js",
+    "static/js/2.de1860c1.chunk.js.map": "/XavyRomeo/static/js/2.de1860c1.chunk.js.map",
     "index.html": "/XavyRomeo/index.html",
-    "static/css/main.465c2664.chunk.css.map": "/XavyRomeo/static/css/main.465c2664.chunk.css.map",
-    "static/js/2.10350897.chunk.js.LICENSE.txt": "/XavyRomeo/static/js/2.10350897.chunk.js.LICENSE.txt",
+    "static/css/main.7367b14d.chunk.css.map": "/XavyRomeo/static/css/main.7367b14d.chunk.css.map",
+    "static/js/2.de1860c1.chunk.js.LICENSE.txt": "/XavyRomeo/static/js/2.de1860c1.chunk.js.LICENSE.txt",
     "static/media/avatar.2effc877.png": "/XavyRomeo/static/media/avatar.2effc877.png",
     "static/media/cloud.13197c98.png": "/XavyRomeo/static/media/cloud.13197c98.png",
     "static/media/coding-pic.60921cbd.jpg": "/XavyRomeo/static/media/coding-pic.60921cbd.jpg",
@@ -31,8 +31,8 @@
     "static/media/palm-tree.0da6478f.png": "/XavyRomeo/static/media/palm-tree.0da6478f.png",
     "static/media/pirate-ship.dbeea88c.png": "/XavyRomeo/static/media/pirate-ship.dbeea88c.png",
     "static/media/react.5fce27f9.svg": "/XavyRomeo/static/media/react.5fce27f9.svg",
-    "static/media/resume.4eadbb44.png": "/XavyRomeo/static/media/resume.4eadbb44.png",
-    "static/media/resume.ade4ec00.pdf": "/XavyRomeo/static/media/resume.ade4ec00.pdf",
+    "static/media/resume.247a44f0.pdf": "/XavyRomeo/static/media/resume.247a44f0.pdf",
+    "static/media/resume.ba5109e0.png": "/XavyRomeo/static/media/resume.ba5109e0.png",
     "static/media/run-buddy.000e1b5f.jpg": "/XavyRomeo/static/media/run-buddy.000e1b5f.jpg",
     "static/media/sea.83609939.png": "/XavyRomeo/static/media/sea.83609939.png",
     "static/media/stripe.bbeb89fe.svg": "/XavyRomeo/static/media/stripe.bbeb89fe.svg",
@@ -43,8 +43,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e3510d07.js",
-    "static/js/2.10350897.chunk.js",
-    "static/css/main.465c2664.chunk.css",
-    "static/js/main.5328a242.chunk.js"
+    "static/js/2.de1860c1.chunk.js",
+    "static/css/main.7367b14d.chunk.css",
+    "static/js/main.1acd0bfd.chunk.js"
   ]
 }
