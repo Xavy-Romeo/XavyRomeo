@@ -10,48 +10,37 @@ import Modal from '@material-ui/core/Modal';
 
 import useStyles from './styles';
 import projects from './projects';
-
-
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-  };
-  
-  function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
-  
-    return {
-      top: `${top}%`,
-      left: `${left}%`,
-      transform: `translate(-${top}%, -${left}%)`,
-    };
-  };
+import Modals from '../Modals';
 
 const Projects = () => {
     const classes = useStyles();
 
     window.scrollTo(0,0);
-
+    
     const [open, setOpen] = useState(false);
   
-    const handleOpen = () => {
+    const handleOpen = (project) => {
       setOpen(true);
+      setModalProject(project);
     };
   
     const handleClose = () => {
       setOpen(false);
     };
 
-    const body = (
-        <Box style={{position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <Box className={classes.paper}>
-                <Modal />
-            </Box>
-        </Box>
-      );
+    const [modalProject, setModalProject] = useState('');
 
     return (
         <>
+            <Modal
+                className={classes.modal}
+                open={open}
+                onClose={handleClose}
+            >
+                <Modals 
+                    project={modalProject}
+                />
+            </Modal>
             <Grid container className={classes.sectionTitleContainer} justifyContent='center'>
                 <Typography className={classes.sectionTitleShadow} variant='h6' component='h1'>
                     PROJECTS
@@ -98,17 +87,13 @@ const Projects = () => {
                                                 Live
                                             </Button>
                                         </Link> */}
-                                        <Button onClick={handleOpen}>
+                                        <Button 
+                                            onClick={() => {
+                                                handleOpen(project)
+                                            }}
+                                        >
                                             open Modal
                                         </Button>
-                                        <Modal
-                                            open={open}
-                                            onClose={handleClose}
-                                            aria-labelledby="simple-modal-title"
-                                            aria-describedby="simple-modal-description"
-                                        >
-                                            {body}
-                                        </Modal>
                                         <Link
                                             href={project.github}
                                             target='_blank' 

@@ -8,6 +8,7 @@ const projects = [
         image: HowRU, 
         name: 'HowRU', 
         technologies: 'React, MongoDB, Express, Node, Material-UI, GraphQL',
+        description: 'Test Description', 
         deployed: 'https://howru-meditation.herokuapp.com/',
         github: 'https://github.com/Xavy-Romeo/how-r-u'
     },
@@ -15,6 +16,7 @@ const projects = [
         image: ManageIt, 
         name: 'Manage It', 
         technologies: 'MySQL, Handlebars, Express, Node, JavaScript, CSS',
+        description: 'Test Description', 
         deployed: 'https://cryptic-bastion-04157.herokuapp.com/',
         github: 'https://github.com/Xavy-Romeo/manage-it'
     },
@@ -22,6 +24,7 @@ const projects = [
         image: DeepThoughts, 
         name: 'Deep Thoughts',
         technologies: 'MySQL, GraphQL, Express, Node, HTML, CSS',
+        description: 'Test Description', 
         deployed: 'https://deep-thoughts-random34234325.herokuapp.com/',
         github: 'https://github.com/Xavy-Romeo/deep-thoughts'
     },
@@ -29,6 +32,7 @@ const projects = [
         image: RunBuddy, 
         name: 'Run Buddy',
         technologies: 'HTML, CSS',
+        description: 'Test Description', 
         deployed: 'https://Xavy-Romeo.github.io/run-buddy/',
         github: 'https://github.com/Xavy-Romeo/run-buddy'
     },
