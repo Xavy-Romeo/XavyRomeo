@@ -5,11 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Modal from '@material-ui/core/Modal';
 
 import useStyles from './styles';
-import projects from './projects';
+import { projects } from '../../utils/';
 import Modals from '../Modals';
 
 const Projects = () => {
@@ -39,6 +38,7 @@ const Projects = () => {
             >
                 <Modals 
                     project={modalProject}
+                    handleClose={handleClose}
                 />
             </Modal>
             <Grid container className={classes.sectionTitleContainer} justifyContent='center'>
@@ -69,42 +69,23 @@ const Projects = () => {
                                             Technologies Used: 
                                         </Typography>
                                     </Box>
-                                    <Box style={{width: '100%', marginTop: '10px', height: '100px'}}>
-                                        <Paper style={{background: 'rgba(255,255,255, .05)', padding: '5px', width: '100%', height: '100%'}}>
+                                    <Box className={classes.technologies}>
+                                        <Paper className={classes.techPaper}>
                                             <Typography  variant='body2'>
                                                 {project.technologies}
                                             </Typography>
                                         </Paper>
                                     </Box>
-                                    <Box>
-                                        {/* <Link
-                                            href={project.deployed}
-                                            target='_blank' 
-                                            rel='noreferrer noopener'
-                                            underline='none'
-                                        >
-                                            <Button className={classes.cardButton}>
-                                                Live
-                                            </Button>
-                                        </Link> */}
-                                        <Button 
-                                            onClick={() => {
-                                                handleOpen(project)
-                                            }}
-                                        >
-                                            open Modal
-                                        </Button>
-                                        <Link
-                                            href={project.github}
-                                            target='_blank' 
-                                            rel='noreferrer noopener'
-                                            underline='none'
-                                        >
-                                            <Button className={classes.cardButton}>
-                                                GitHub
-                                            </Button>
-                                        </Link>
-                                    </Box>
+                                    <Button 
+                                        onClick={() => {
+                                            handleOpen(project)
+                                        }}
+                                        className={classes.modalButton}
+                                    >
+                                        <Typography>
+                                            View Project
+                                        </Typography>
+                                    </Button>
                                 </Grid>
                             </Box>
                         </Grid>
@@ -113,6 +94,6 @@ const Projects = () => {
             </Paper>
         </>
     )
-}
+};
 
 export default Projects;

@@ -4,7 +4,6 @@ const useStyles = makeStyles({
     appbarDark: {
         height: '75px',
         boxShadow: 'none',
-        // background: 'linear-gradient(to bottom, black, rgba(0,0,0,.4) 70%, rgba(0,0,0,0))',
         background: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.95) 60%, rgba(0,0,0,.4) 90%, rgba(0,0,0,.05))'
     },
     appbarLight: {

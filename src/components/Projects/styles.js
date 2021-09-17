@@ -47,19 +47,31 @@ const useStyles = makeStyles({
         borderRadius: '4px',
         padding: '3px',
     },
+    technologies: {
+        width: '100%', 
+        marginTop: '10px', 
+        height: '100px'
+    },
+    techPaper: {
+        background: 'rgba(255,255,255, .05)', 
+        padding: '5px', 
+        width: '100%', 
+        height: '100%'
+    },
     modal: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        background:'rgba(0,0,0,.85)'
     },
-    cardButton: {
-        width: '40%',
-        margin: '5px',
+    modalButton: {
+        marginTop: '15px',
+        width: '100%',
         background: 'linear-gradient(rgba(55,188,241,1), white, rgba(55,188,241,1))',
         '&:hover': {
             background: 'linear-gradient(transparent, rgba(55,188,241,1), transparent)',
         },
-    },
+    }
 });
 
 export default useStyles;
