@@ -44,7 +44,7 @@ const About = () => {
                             I am a developer based in the United States. 
                             I help bring visions and ideas to life. 
                             Show me a design and I can create it.
-                            I am the guy that makes sites work, plain and simple.
+                            I am the guy that makes web apps work, plain and simple.
                             Take a look at my projects and see if my knowledge fits what you are looking for.  
                         </Typography>
                         <Grid container justifyContent='center'>
