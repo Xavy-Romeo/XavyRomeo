@@ -26,7 +26,11 @@ const Modals = ({ project, handleClose }) => {
             </Grid>
             <Grid item xs={12}>
                 <Grid container justifyContent='center'>
-                    <img src={project.preview} className={classes.previewImage} />
+                    <img 
+                        src={project.preview} 
+                        className={classes.previewImage} 
+                        alt={project.name}
+                    />
                 </Grid>
             </Grid>
             <Grid item xs={12} lg={8}>
