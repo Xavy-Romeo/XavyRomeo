@@ -12,6 +12,7 @@ import GraphQL from '../../assets/images/graphql.svg';
 import Jest from '../../assets/images/jest.svg';
 import Stripe from '../../assets/images/stripe.svg';
 import JQuery from '../../assets/images/jquery.svg';
+import Redux from '../../assets/images/redux.svg'
 
 const logos = [
     {logo: ReactLogo, name: 'REACT'}, 
@@ -27,7 +28,8 @@ const logos = [
     {logo: Stripe, name: 'STRIPE'},
     {logo: MySql, name: 'MYSQL'}, 
     {logo: Mongo, name: 'MONGO'},
-    {logo: GraphQL, name: 'GRAPHQL'} 
+    {logo: GraphQL, name: 'GRAPHQL'},
+    {logo: Redux, name: 'REDUX'} 
 ];
 
 export default logos;

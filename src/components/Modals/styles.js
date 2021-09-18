@@ -28,18 +28,24 @@ const useStyles = makeStyles({
   }, 
   previewImage: {
     objectFit: 'contain',
-    height: '250px',
-    width: '444px',
+    height: '394px',
+    width: '700px',
     maxWidth: '100%',
     boxShadow: '0px 4px 5px -2px rgba(255,255,255,0.2),0px 7px 10px 1px rgba(255,255,255,0.14),0px 2px 16px 1px rgba(255,255,255,0.12)',
     borderRadius: '4px', 
     padding: '10px',
+    margin: '0 auto',
+    '@media (max-width:850px)': {
+      height: '250px',
+      width: '444px',
+      padding: '5px'
+    },
     '@media (max-width:550px)': {
       height: '125px',
       width: '222px',
       padding: '5px'
     },
-    margin: '0 auto'
+  
   },
   descBox: {
     marginBottom: '10px'
