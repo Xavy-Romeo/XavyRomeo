@@ -17,7 +17,7 @@ My professional portfolio page!
 ## Usage:
 Visit the site and be impressed! 
 
-## Website: 
+## Deployed Link: 
 https://xavy-romeo.github.io/XavyRomeo/
 
 ## Technologies Used
