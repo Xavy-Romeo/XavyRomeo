@@ -6,7 +6,7 @@ My professional portfolio page!
 ## Table of Contents: 
 1. [Screenshot](#Screenshot)
 2. [Usage](#Usage)
-3. [Website](#Website)
+3. [Deployed Link](#Deployed-Link)
 4. [Technologies Used](#Technologies-Used)
 5. [Questions](#Questions)
 
