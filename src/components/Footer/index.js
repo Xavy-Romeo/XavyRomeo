@@ -32,7 +32,7 @@ const Footer = () => {
                             </Grid>
                             <Grid container justifyContent='center'>
                                 <Link 
-                                    href='https://www.linkedin.com/in/xavy-romeo-722076215/'
+                                    href='https://www.linkedin.com/in/xavy-romeo'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     aria-label='linked in profile'
