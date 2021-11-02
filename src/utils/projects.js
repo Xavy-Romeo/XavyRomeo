@@ -2,12 +2,25 @@ import HowRU from '../assets/images/howru-img.jpg';
 import ManageIt from '../assets/images/manage-it.png';
 import Cinfo from '../assets/images/cinfo.png';
 import DeepThoughts from '../assets/images/deep-thoughts.png';
+import TheXavyShop from '../assets/images/the-xavy-shop.png';
 import CinfoPage from '../assets/images/cinfo-page.png';
 import ManagePage from '../assets/images/manage-page.png';
 import HowRUPage from '../assets/images/howru-page.png';
-import ThoughtsPage from '../assets/images/thoughts-page.png'
+import ThoughtsPage from '../assets/images/thoughts-page.png';
+import XavyShopPage from '../assets/images/xavy-shop-page.png';
 
 const projects = [
+    {
+        image: TheXavyShop,
+        preview: XavyShopPage, 
+        name: 'The Xavy Shop', 
+        technologies: 'React, GraphQL, MongoDB, Material-UI, Express, Node, Stripe',
+        description: ' An E-Commerce application where you can purchase your favorite sporting goods. ' + 
+            'Uses a react front end, styled by Material-UI  and receives data from a GraphQL api. Global state is managed through ' + 
+            'react’s context api and local state is managed using react hooks. Payment processing is powered by the Stipe api.',
+        deployed: 'https://the-xavy-shop.herokuapp.com/',
+        github: 'https://github.com/Xavy-Romeo/the-xavy-shop/'
+    },
     {
         image: HowRU,
         preview: HowRUPage, 
@@ -39,18 +52,18 @@ const projects = [
         deployed: 'https://deep-thoughts-random34234325.herokuapp.com/',
         github: 'https://github.com/Xavy-Romeo/deep-thoughts'
     },
-    {
-        image: Cinfo,
-        preview: CinfoPage,  
-        name: 'Cinfo',
-        technologies: 'HTML, CSS, JavaScript',
-        description: 'The high concept of the Cinfo web application is a simple solution answer to the question of what to do when you ' + 
-            'want to experience the life of the city. It is a streamlined events, arts, and culture aggregator focused towared metropolitan ' +
-            "areas. It's designed to be used at home and on the go, with an unobtrusive design and user experience. The functional concept of " +
-            'Cinfo is very simple; A user enters a city and is returned with current events, arts, and culture information regarding that city.', 
-        deployed: 'https://xavy-romeo.github.io/project-1-ucla/',
-        github: 'https://github.com/Xavy-Romeo/project-1-ucla'
-    },
+    // {
+    //     image: Cinfo,
+    //     preview: CinfoPage,  
+    //     name: 'Cinfo',
+    //     technologies: 'HTML, CSS, JavaScript',
+    //     description: 'The high concept of the Cinfo web application is a simple solution answer to the question of what to do when you ' + 
+    //         'want to experience the life of the city. It is a streamlined events, arts, and culture aggregator focused towared metropolitan ' +
+    //         "areas. It's designed to be used at home and on the go, with an unobtrusive design and user experience. The functional concept of " +
+    //         'Cinfo is very simple; A user enters a city and is returned with current events, arts, and culture information regarding that city.', 
+    //     deployed: 'https://xavy-romeo.github.io/project-1-ucla/',
+    //     github: 'https://github.com/Xavy-Romeo/project-1-ucla'
+    // },
 ];
 
 export default projects;
