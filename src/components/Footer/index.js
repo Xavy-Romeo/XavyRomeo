@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Modal from '@material-ui/core/Modal';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
@@ -14,6 +15,16 @@ import XRLogo from '../../assets/images/xr-logo.png';
 
 const Footer = () => {
     const classes = useStyles();
+
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleOpen = () => {
+        setModalOpen(true);
+    };
+
+    const handleClose = () => {
+        setModalOpen(false);
+    };
 
     return (
         <footer>
