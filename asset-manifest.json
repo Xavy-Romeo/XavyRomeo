@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/XavyRomeo/static/css/main.7367b14d.chunk.css",
-    "main.js": "/XavyRomeo/static/js/main.4b297444.chunk.js",
-    "main.js.map": "/XavyRomeo/static/js/main.4b297444.chunk.js.map",
+    "main.js": "/XavyRomeo/static/js/main.a04b8147.chunk.js",
+    "main.js.map": "/XavyRomeo/static/js/main.a04b8147.chunk.js.map",
     "runtime-main.js": "/XavyRomeo/static/js/runtime-main.e3510d07.js",
     "runtime-main.js.map": "/XavyRomeo/static/js/runtime-main.e3510d07.js.map",
     "static/js/2.13fa2126.chunk.js": "/XavyRomeo/static/js/2.13fa2126.chunk.js",
@@ -36,8 +36,8 @@
     "static/media/pirate-ship.dbeea88c.png": "/XavyRomeo/static/media/pirate-ship.dbeea88c.png",
     "static/media/react.5fce27f9.svg": "/XavyRomeo/static/media/react.5fce27f9.svg",
     "static/media/redux.e2e2d968.svg": "/XavyRomeo/static/media/redux.e2e2d968.svg",
-    "static/media/resume.1570f666.pdf": "/XavyRomeo/static/media/resume.1570f666.pdf",
-    "static/media/resume.5dadf43d.png": "/XavyRomeo/static/media/resume.5dadf43d.png",
+    "static/media/resume.a5ec3c67.png": "/XavyRomeo/static/media/resume.a5ec3c67.png",
+    "static/media/resume.a8204bad.pdf": "/XavyRomeo/static/media/resume.a8204bad.pdf",
     "static/media/sea.83609939.png": "/XavyRomeo/static/media/sea.83609939.png",
     "static/media/stripe.bbeb89fe.svg": "/XavyRomeo/static/media/stripe.bbeb89fe.svg",
     "static/media/sun.48a341e5.png": "/XavyRomeo/static/media/sun.48a341e5.png",
@@ -52,6 +52,6 @@
     "static/js/runtime-main.e3510d07.js",
     "static/js/2.13fa2126.chunk.js",
     "static/css/main.7367b14d.chunk.css",
-    "static/js/main.4b297444.chunk.js"
+    "static/js/main.a04b8147.chunk.js"
   ]
 }
